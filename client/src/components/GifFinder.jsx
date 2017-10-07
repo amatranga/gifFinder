@@ -13,7 +13,6 @@ class GifFinder extends React.Component {
     
     this.handleChange=this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.searchFor = this.searchFor.bind(this);
   }
 
   handleChange(event) {
@@ -24,7 +23,7 @@ class GifFinder extends React.Component {
   handleSubmit(event) {
     event.preventDefault();
     let query = this.state.query;
-    fetch(`http://api.giphy.com/v1/gifs/search?q=${query}&api_key=${YOUR_GIPHY_API_KEY}&limit=12`, {
+    fetch(`http://api.giphy.com/v1/gifs/search?q=${query}&api_key=dc6zaTOxFJmzC&limit=12`, {
       method: 'GET'
     })
     .then((res) => {
@@ -37,10 +36,6 @@ class GifFinder extends React.Component {
     .catch((err) => {
       console.log(err, 'Error in request');
     });
-  }
-
-  searchFor(term) {
-    console.log('Searching for ', term);
   }
 
   render() {

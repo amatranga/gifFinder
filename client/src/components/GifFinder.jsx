@@ -24,7 +24,7 @@ class GifFinder extends React.Component {
   handleSubmit(event) {
     event.preventDefault();
     let query = this.state.query;
-    fetch(`http://api.giphy.com/v1/gifs/search?q=${query}&api_key=dc6zaTOxFJmzC&limit=12`, {
+    fetch(`http://api.giphy.com/v1/gifs/search?q=${query}&api_key=${YOUR_GIPHY_API_KEY}&limit=12`, {
       method: 'GET'
     })
     .then((res) => {
